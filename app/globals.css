@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #313131;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#logs {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  font-family: monospace;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  margin: 5px 0;
+  white-space: pre-wrap;
+}
+
+.wallet-connect-button {
+  @apply px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors;
+}
+
+.wallet-address {
+  @apply px-3 py-1 bg-gray-100 rounded text-sm font-mono;
+}
